@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 RUN apt-get -y update
-RUN apt install sudo
+RUN apt-get install sudo
 RUN apt-get install -y git
 RUN apt-get install -y make
 RUN sudo apt install build-essesntial libpcre3-dev libssl-dev zlib1g-dev
