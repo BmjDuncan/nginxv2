@@ -9,7 +9,7 @@ RUN apt-get install -y zlib1g-dev
 RUN git clone https://github.com/arut/nginx-rtmp-module.git
 RUN git clone https://github.com/nginx/nginx.git
 RUN cd nginx
-RUN ./auto/configure --add-module=../nginx-rtmp-module
+RUN ./configure --add-module=../nginx-rtmp-module
 RUN make
 RUN sudo make install
 RUN git clone https://github.com/BmjDuncan/nginxv2/blob/main/niginx.conf
