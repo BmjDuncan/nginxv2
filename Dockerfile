@@ -6,6 +6,7 @@ RUN apt-get install -y make
 RUN apt-get install -y libpcre3-dev
 RUN apt-get install -y libssl-dev
 RUN apt-get install -y zlib1g-dev
+RUN apt-get install -y gcc
 RUN git clone https://github.com/arut/nginx-rtmp-module.git
 RUN git clone https://github.com/nginx/nginx.git
 RUN cd nginx && ./auto/configure --add-module=../nginx-rtmp-module
