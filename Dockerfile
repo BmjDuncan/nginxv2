@@ -3,7 +3,9 @@ RUN apt-get -y update
 RUN apt-get install sudo
 RUN apt-get install -y git
 RUN apt-get install -y make
-RUN sudo apt install build-essesntial libpcre3-dev libssl-dev zlib1g-dev
+RUN apt-get install -y libpcre3-dev
+RUN apt-get install -y libssl-dev
+RUN apt-get install -y zlib1g-dev
 RUN git clone https://github.com/arut/nginx-rtmp-module.git
 RUN git clone https://github.com/nginx/nginx.git
 RUN cd nginx
