@@ -10,7 +10,8 @@ RUN apt-get install -y gcc
 RUN git clone https://github.com/arut/nginx-rtmp-module.git
 RUN git clone https://github.com/nginx/nginx.git
 RUN cd nginx && ./auto/configure --add-module=../nginx-rtmp-module
-RUN make
-RUN sudo make install
-RUN git clone https://github.com/BmjDuncan/nginxv2/blob/main/niginx.conf
+RUN cd nginx && make && sudo make install
+ADD nginx.conf /usr/local/nginx-streaming/conf/nginx.conf
 RUN sudo nginx
+EXPOSE 1935
+EXPOSE 80
