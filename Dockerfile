@@ -12,5 +12,6 @@ RUN git clone https://github.com/nginx/nginx.git
 RUN cd nginx && ./auto/configure --add-module=../nginx-rtmp-module
 RUN cd nginx && make && sudo make install
 ADD nginx.conf /usr/local/nginx-streaming/conf/nginx.conf
+CMD ["nginx"]
 EXPOSE 1935
 EXPOSE 80
